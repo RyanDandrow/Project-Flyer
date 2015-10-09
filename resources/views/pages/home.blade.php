@@ -1,5 +1,11 @@
 @extends('layout')
 
 @section('content')
-	<h1>Project FLyer</h1>
+	<div class="jumbotron">
+		<h1>Project Flyer</h1>
+
+		<p>Lorem ipsum.........</p>
+
+		<a href="/flyers/create" class="btn btn-primary">Create a Flyer</a>
+	</div>
 @stop
