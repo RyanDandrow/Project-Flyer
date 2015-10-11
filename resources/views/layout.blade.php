@@ -3,7 +3,8 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Project Flyer</title>
-	<link rel="stylesheet" href="/css/app.css">
+	<link rel="stylesheet" href="/css/libs.css">
+  <link rel="stylesheet" href="/css/app.css">
 </head>
 <body>
 
@@ -32,6 +33,16 @@
 	<div class="container">
 		@yield('content')
 	</div>
+
+  <script src="/js/libs.js"></script>
+  <script type="text/javascript">
+  swal({
+    title: "Error!",
+    text: "Here is the message",
+    type: "error",
+    confirmButtonText: "cool"
+  })
+  </script>
 
 </body>
 </html>
