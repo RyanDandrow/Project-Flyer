@@ -35,14 +35,8 @@
 	</div>
 
   <script src="/js/libs.js"></script>
-  <script type="text/javascript">
-  swal({
-    title: "Error!",
-    text: "Here is the message",
-    type: "error",
-    confirmButtonText: "cool"
-  })
-  </script>
+
+  @include('flash')
 
 </body>
 </html>
