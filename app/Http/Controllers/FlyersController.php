@@ -10,6 +10,10 @@ use App\Http\Controllers\Controller;
 
 class FlyersController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     /**
      * Display a listing of the resource.
      *
@@ -27,8 +31,6 @@ class FlyersController extends Controller
      */
     public function create()
     {
-        flash()->overlay('hello world', 'this is the message');
-
         return view('flyers.create');
     }
 
@@ -76,8 +78,6 @@ class FlyersController extends Controller
         $photo = Photo::fromForm($request->file('photo'));
 
         Flyer::locatedAt($zip, $street)->addPhoto($photo);
-
-        return 'Done';
     }
 
     /**
