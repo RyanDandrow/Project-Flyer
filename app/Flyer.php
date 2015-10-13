@@ -32,14 +32,25 @@ class Flyer extends Model
 	{
 		$street = str_replace('-', ' ', $street);
 
-		return static::where(compact('zip', 'street'))->first();
+		return static::where(compact('zip', 'street'))->firstOrFail();
 	}
 
+	/**
+	 * Format the price of the home.
+	 *
+	 * @param integer $price
+	 * @return string
+	 */
 	public function getPriceAttribute($price)
 	{
 		return '$' . number_format($price);
 	}
 
+	/**
+	 * Add a photo to a flyer.
+	 *
+	 * @param Photo $photo
+	 */
 	public function addPhoto(Photo $photo)
 	{
 		return $this->photos()->save($photo);
